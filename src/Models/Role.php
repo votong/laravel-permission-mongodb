@@ -1,18 +1,18 @@
 <?php
 
-namespace Spatie\Permission\Models;
+namespace VoTong\Permission\Models;
 
-use Illuminate\Database\Eloquent\Model;
-use Illuminate\Database\Eloquent\Relations\BelongsToMany;
-use Spatie\Permission\Contracts\Role as RoleContract;
-use Spatie\Permission\Exceptions\GuardDoesNotMatch;
-use Spatie\Permission\Exceptions\PermissionDoesNotExist;
-use Spatie\Permission\Exceptions\RoleAlreadyExists;
-use Spatie\Permission\Exceptions\RoleDoesNotExist;
-use Spatie\Permission\Guard;
-use Spatie\Permission\PermissionRegistrar;
-use Spatie\Permission\Traits\HasPermissions;
-use Spatie\Permission\Traits\RefreshesPermissionCache;
+use MongoDB\Laravel\Eloquent\Model;
+use MongoDB\Laravel\Relations\BelongsToMany;
+use VoTong\Permission\Contracts\Role as RoleContract;
+use VoTong\Permission\Exceptions\GuardDoesNotMatch;
+use VoTong\Permission\Exceptions\PermissionDoesNotExist;
+use VoTong\Permission\Exceptions\RoleAlreadyExists;
+use VoTong\Permission\Exceptions\RoleDoesNotExist;
+use VoTong\Permission\Guard;
+use VoTong\Permission\PermissionRegistrar;
+use VoTong\Permission\Traits\HasPermissions;
+use VoTong\Permission\Traits\RefreshesPermissionCache;
 
 /**
  * @property ?\Illuminate\Support\Carbon $created_at

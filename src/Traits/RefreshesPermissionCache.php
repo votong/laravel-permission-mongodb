@@ -1,8 +1,8 @@
 <?php
 
-namespace Spatie\Permission\Traits;
+namespace VoTong\Permission\Traits;
 
-use Spatie\Permission\PermissionRegistrar;
+use VoTong\Permission\PermissionRegistrar;
 
 trait RefreshesPermissionCache
 {

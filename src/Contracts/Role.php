@@ -1,15 +1,15 @@
 <?php
 
-namespace Spatie\Permission\Contracts;
+namespace VoTong\Permission\Contracts;
 
-use Illuminate\Database\Eloquent\Relations\BelongsToMany;
+use MongoDB\Laravel\Relations\BelongsToMany;
 
 /**
  * @property int|string $id
  * @property string $name
  * @property string|null $guard_name
  *
- * @mixin \Spatie\Permission\Models\Role
+ * @mixin \VoTong\Permission\Models\Role
  */
 interface Role
 {
@@ -22,7 +22,7 @@ interface Role
      * Find a role by its name and guard name.
      *
      *
-     * @throws \Spatie\Permission\Exceptions\RoleDoesNotExist
+     * @throws \VoTong\Permission\Exceptions\RoleDoesNotExist
      */
     public static function findByName(string $name, ?string $guardName): self;
 
@@ -30,7 +30,7 @@ interface Role
      * Find a role by its id and guard name.
      *
      *
-     * @throws \Spatie\Permission\Exceptions\RoleDoesNotExist
+     * @throws \VoTong\Permission\Exceptions\RoleDoesNotExist
      */
     public static function findById(int|string $id, ?string $guardName): self;
 
@@ -42,7 +42,7 @@ interface Role
     /**
      * Determine if the user may perform the given permission.
      *
-     * @param  string|\Spatie\Permission\Contracts\Permission  $permission
+     * @param  string|\VoTong\Permission\Contracts\Permission  $permission
      */
     public function hasPermissionTo($permission, ?string $guardName): bool;
 }

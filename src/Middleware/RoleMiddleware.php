@@ -1,11 +1,11 @@
 <?php
 
-namespace Spatie\Permission\Middleware;
+namespace VoTong\Permission\Middleware;
 
 use Closure;
 use Illuminate\Support\Facades\Auth;
-use Spatie\Permission\Exceptions\UnauthorizedException;
-use Spatie\Permission\Guard;
+use VoTong\Permission\Exceptions\UnauthorizedException;
+use VoTong\Permission\Guard;
 
 class RoleMiddleware
 {

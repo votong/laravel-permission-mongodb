@@ -1,6 +1,6 @@
 <?php
 
-namespace Spatie\Permission;
+namespace VoTong\Permission;
 
 use Composer\InstalledVersions;
 use Illuminate\Contracts\Auth\Access\Gate;
@@ -13,8 +13,8 @@ use Illuminate\Support\Arr;
 use Illuminate\Support\Collection;
 use Illuminate\Support\ServiceProvider;
 use Illuminate\View\Compilers\BladeCompiler;
-use Spatie\Permission\Contracts\Permission as PermissionContract;
-use Spatie\Permission\Contracts\Role as RoleContract;
+use VoTong\Permission\Contracts\Permission as PermissionContract;
+use VoTong\Permission\Contracts\Role as RoleContract;
 
 class PermissionServiceProvider extends ServiceProvider
 {
@@ -128,7 +128,7 @@ class PermissionServiceProvider extends ServiceProvider
 
     protected function registerBladeExtensions(BladeCompiler $bladeCompiler): void
     {
-        $bladeMethodWrapper = '\\Spatie\\Permission\\PermissionServiceProvider::bladeMethodWrapper';
+        $bladeMethodWrapper = '\\VoTong\\Permission\\PermissionServiceProvider::bladeMethodWrapper';
 
         // permission checks
         $bladeCompiler->if('haspermission', fn () => $bladeMethodWrapper('checkPermissionTo', ...func_get_args()));

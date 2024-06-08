@@ -1,8 +1,8 @@
 <?php
 
-namespace Spatie\Permission\Contracts;
+namespace VoTong\Permission\Contracts;
 
-use Illuminate\Database\Eloquent\Model;
+use MongoDB\Laravel\Eloquent\Model;
 
 interface Wildcard
 {

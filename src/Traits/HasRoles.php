@@ -1,14 +1,14 @@
 <?php
 
-namespace Spatie\Permission\Traits;
+namespace VoTong\Permission\Traits;
 
-use Illuminate\Database\Eloquent\Builder;
-use Illuminate\Database\Eloquent\Relations\BelongsToMany;
+use MongoDB\Laravel\Eloquent\Builder;
+use MongoDB\Laravel\Relations\BelongsToMany;
 use Illuminate\Support\Arr;
 use Illuminate\Support\Collection;
-use Spatie\Permission\Contracts\Permission;
-use Spatie\Permission\Contracts\Role;
-use Spatie\Permission\PermissionRegistrar;
+use VoTong\Permission\Contracts\Permission;
+use VoTong\Permission\Contracts\Role;
+use VoTong\Permission\PermissionRegistrar;
 
 trait HasRoles
 {

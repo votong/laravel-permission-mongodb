@@ -1,11 +1,11 @@
 <?php
 
-namespace Spatie\Permission\Commands;
+namespace VoTong\Permission\Commands;
 
 use Illuminate\Console\Command;
-use Spatie\Permission\Contracts\Permission as PermissionContract;
-use Spatie\Permission\Contracts\Role as RoleContract;
-use Spatie\Permission\PermissionRegistrar;
+use VoTong\Permission\Contracts\Permission as PermissionContract;
+use VoTong\Permission\Contracts\Role as RoleContract;
+use VoTong\Permission\PermissionRegistrar;
 
 class CreateRole extends Command
 {

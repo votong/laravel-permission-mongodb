@@ -1,6 +1,6 @@
 <?php
 
-namespace Spatie\Permission\Exceptions;
+namespace VoTong\Permission\Exceptions;
 
 use Illuminate\Support\Collection;
 use InvalidArgumentException;

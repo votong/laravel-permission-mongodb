@@ -1,21 +1,21 @@
 <?php
 
-namespace Spatie\Permission\Traits;
+namespace VoTong\Permission\Traits;
 
-use Illuminate\Database\Eloquent\Builder;
-use Illuminate\Database\Eloquent\Relations\BelongsToMany;
+use MongoDB\Laravel\Eloquent\Builder;
+use MongoDB\Laravel\Relations\BelongsToMany;
 use Illuminate\Support\Arr;
 use Illuminate\Support\Collection;
-use Spatie\Permission\Contracts\Permission;
-use Spatie\Permission\Contracts\Role;
-use Spatie\Permission\Contracts\Wildcard;
-use Spatie\Permission\Exceptions\GuardDoesNotMatch;
-use Spatie\Permission\Exceptions\PermissionDoesNotExist;
-use Spatie\Permission\Exceptions\WildcardPermissionInvalidArgument;
-use Spatie\Permission\Exceptions\WildcardPermissionNotImplementsContract;
-use Spatie\Permission\Guard;
-use Spatie\Permission\PermissionRegistrar;
-use Spatie\Permission\WildcardPermission;
+use VoTong\Permission\Contracts\Permission;
+use VoTong\Permission\Contracts\Role;
+use VoTong\Permission\Contracts\Wildcard;
+use VoTong\Permission\Exceptions\GuardDoesNotMatch;
+use VoTong\Permission\Exceptions\PermissionDoesNotExist;
+use VoTong\Permission\Exceptions\WildcardPermissionInvalidArgument;
+use VoTong\Permission\Exceptions\WildcardPermissionNotImplementsContract;
+use VoTong\Permission\Guard;
+use VoTong\Permission\PermissionRegistrar;
+use VoTong\Permission\WildcardPermission;
 
 trait HasPermissions
 {

@@ -1,6 +1,6 @@
 <?php
 
-namespace Spatie\Permission;
+namespace VoTong\Permission;
 
 use Illuminate\Cache\CacheManager;
 use Illuminate\Contracts\Auth\Access\Authorizable;
@@ -8,9 +8,9 @@ use Illuminate\Contracts\Auth\Access\Gate;
 use Illuminate\Contracts\Cache\Repository;
 use Illuminate\Contracts\Cache\Store;
 use Illuminate\Database\Eloquent\Collection;
-use Illuminate\Database\Eloquent\Model;
-use Spatie\Permission\Contracts\Permission;
-use Spatie\Permission\Contracts\Role;
+use MongoDB\Laravel\Eloquent\Model;
+use VoTong\Permission\Contracts\Permission;
+use VoTong\Permission\Contracts\Role;
 
 class PermissionRegistrar
 {
@@ -97,11 +97,11 @@ class PermissionRegistrar
     /**
      * Set the team id for teams/groups support, this id is used when querying permissions/roles
      *
-     * @param  int|string|\Illuminate\Database\Eloquent\Model|null  $id
+     * @param  int|string|\MongoDB\Laravel\Eloquent\Model|null  $id
      */
     public function setPermissionsTeamId($id): void
     {
-        if ($id instanceof \Illuminate\Database\Eloquent\Model) {
+        if ($id instanceof \MongoDB\Laravel\Eloquent\Model) {
             $id = $id->getKey();
         }
         $this->teamId = $id;

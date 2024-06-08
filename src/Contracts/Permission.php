@@ -1,15 +1,15 @@
 <?php
 
-namespace Spatie\Permission\Contracts;
+namespace VoTong\Permission\Contracts;
 
-use Illuminate\Database\Eloquent\Relations\BelongsToMany;
+use MongoDB\Laravel\Relations\BelongsToMany;
 
 /**
  * @property int|string $id
  * @property string $name
  * @property string|null $guard_name
  *
- * @mixin \Spatie\Permission\Models\Permission
+ * @mixin \VoTong\Permission\Models\Permission
  */
 interface Permission
 {
@@ -22,7 +22,7 @@ interface Permission
      * Find a permission by its name.
      *
      *
-     * @throws \Spatie\Permission\Exceptions\PermissionDoesNotExist
+     * @throws \VoTong\Permission\Exceptions\PermissionDoesNotExist
      */
     public static function findByName(string $name, ?string $guardName): self;
 
@@ -30,7 +30,7 @@ interface Permission
      * Find a permission by its id.
      *
      *
-     * @throws \Spatie\Permission\Exceptions\PermissionDoesNotExist
+     * @throws \VoTong\Permission\Exceptions\PermissionDoesNotExist
      */
     public static function findById(int|string $id, ?string $guardName): self;
 

@@ -14,11 +14,11 @@ if (! function_exists('getModelForGuard')) {
 
 if (! function_exists('setPermissionsTeamId')) {
     /**
-     * @param  int|string|null|\Illuminate\Database\Eloquent\Model  $id
+     * @param  int|string|null|\MongoDB\Laravel\Eloquent\Model  $id
      */
     function setPermissionsTeamId($id)
     {
-        app(\Spatie\Permission\PermissionRegistrar::class)->setPermissionsTeamId($id);
+        app(\VoTong\Permission\PermissionRegistrar::class)->setPermissionsTeamId($id);
     }
 }
 
@@ -28,6 +28,6 @@ if (! function_exists('getPermissionsTeamId')) {
      */
     function getPermissionsTeamId()
     {
-        return app(\Spatie\Permission\PermissionRegistrar::class)->getPermissionsTeamId();
+        return app(\VoTong\Permission\PermissionRegistrar::class)->getPermissionsTeamId();
     }
 }

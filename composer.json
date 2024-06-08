@@ -1,5 +1,5 @@
 {
-    "name": "spatie/laravel-permission",
+    "name": "votong/laravel-permission-mongodb",
     "description": "Permission handling for Laravel 8.0 and up",
     "license": "MIT",
     "keywords": [
@@ -20,13 +20,14 @@
             "role": "Developer"
         }
     ],
-    "homepage": "https://github.com/spatie/laravel-permission",
+    "homepage": "https://github.com/votong/laravel-permission-mongodb",
     "require": {
         "php": "^8.0",
         "illuminate/auth": "^8.12|^9.0|^10.0|^11.0",
         "illuminate/container": "^8.12|^9.0|^10.0|^11.0",
         "illuminate/contracts": "^8.12|^9.0|^10.0|^11.0",
-        "illuminate/database": "^8.12|^9.0|^10.0|^11.0"
+        "illuminate/database": "^8.12|^9.0|^10.0|^11.0",
+        "mongodb/laravel-mongodb": "^4.4"
     },
     "require-dev": {
         "laravel/passport": "^11.0|^12.0",
@@ -37,7 +38,7 @@
     "prefer-stable": true,
     "autoload": {
         "psr-4": {
-            "Spatie\\Permission\\": "src"
+            "VoTong\\Permission\\": "src"
         },
         "files": [
             "src/helpers.php"
@@ -45,7 +46,7 @@
     },
     "autoload-dev": {
         "psr-4": {
-            "Spatie\\Permission\\Tests\\": "tests"
+            "VoTong\\Permission\\Tests\\": "tests"
         }
     },
     "config": {
@@ -58,7 +59,7 @@
         },
         "laravel": {
             "providers": [
-                "Spatie\\Permission\\PermissionServiceProvider"
+                "VoTong\\Permission\\PermissionServiceProvider"
             ]
         }
     },

@@ -1,11 +1,11 @@
 <?php
 
-namespace Spatie\Permission;
+namespace VoTong\Permission;
 
-use Illuminate\Database\Eloquent\Model;
+use MongoDB\Laravel\Eloquent\Model;
 use Illuminate\Support\Str;
-use Spatie\Permission\Contracts\Wildcard;
-use Spatie\Permission\Exceptions\WildcardPermissionNotProperlyFormatted;
+use VoTong\Permission\Contracts\Wildcard;
+use VoTong\Permission\Exceptions\WildcardPermissionNotProperlyFormatted;
 
 class WildcardPermission implements Wildcard
 {
